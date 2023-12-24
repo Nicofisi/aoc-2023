@@ -19,7 +19,7 @@ fun main() {
 }
 
 private tailrec fun solvePartOfTask2(i: Int, position: String, instructions: Sequence<Boolean>, movements: Map<String, Pair<String, String>>): Int {
-    printProgressEveryFiveSeconds(i)
+    printProgressEveryNowAndThen(i)
     if (position.endsWith("Z")) {
         return i
     }

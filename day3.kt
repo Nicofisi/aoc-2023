@@ -1,11 +1,11 @@
 import java.io.File
 
-typealias Position = Pair<Int, Int>
+private typealias PositionPair = Pair<Int, Int>
 
 fun main() {
-    val symbolPositions = mutableSetOf<Position>()
-    val starPositions = mutableSetOf<Position>()
-    val numbersAtPositions = mutableMapOf<Position, Int>()
+    val symbolPositions = mutableSetOf<PositionPair>()
+    val starPositions = mutableSetOf<PositionPair>()
+    val numbersAtPositions = mutableMapOf<PositionPair, Int>()
 
     File("day3input.txt").bufferedReader().lineSequence().withIndex().forEach { (lineIndex, line) ->
         var currentNumber = ""
